@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For My Kiddo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom right, #c5d1ff, #e0bbf7);
+      color: #4a0072;
+      text-align: center;
+      padding: 20px;
+      animation: backgroundAnimation 10s infinite alternate;
+    }
+    @keyframes backgroundAnimation {
+      0% { background: linear-gradient(to bottom right, #c5d1ff, #e0bbf7); }
+      100% { background: linear-gradient(to bottom right, #ffafcc, #ffd1ff); }
+    }
+    header {
+      padding: 30px 10px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      animation: textGlow 1.5s ease-in-out infinite alternate;
+    }
+    @keyframes textGlow {
+      0% { text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4; }
+      100% { text-shadow: 0 0 30px #ff69b4, 0 0 50px #ff69b4; }
+    }
+    section {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 0.5s;
+      margin: 40px 0;
+      padding: 20px;
+      border-radius: 15px;
+      background-color: #f5edff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .heart {
+      animation: float 3s ease-in-out infinite;
+      color: #ff69b4;
+      font-size: 2rem;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .footer {
+      margin-top: 50px;
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+    audio {
+      margin-top: 20px;
+      border-radius: 10px;
+      border: 2px solid #ff69b4;
+      padding: 10px;
+    }
+    .love-animation {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 5rem;
+      animation: loveHeart 5s infinite ease-in-out;
+    }
+    @keyframes loveHeart {
+      0%, 100% { color: #ff69b4; transform: scale(1); }
+      50% { color: #ff1493; transform: scale(1.2); }
+    }
+    .twinkle {
+      animation: twinkle 1.5s infinite alternate;
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      font-size: 3rem;
+    }
+    @keyframes twinkle {
+      0% { opacity: 0.5; }
+      100% { opacity: 1; }
+    }
+    #loader {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: #fce4ec;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      font-size: 2rem;
+      color: #d81b60;
+      font-family: 'Quicksand', sans-serif;
+    }
+    .heart-beat {
+      animation: heartbeat 1s infinite;
+    }
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
+    #musicControls button {
+      padding: 10px 15px;
+      background: #ff69b4;
+      color: white;
+      font-family: 'Quicksand', sans-serif;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      margin: 5px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      cursor: pointer;
+      z-index: 10000;
+    }
+  </style>
+</head>
+<body>
+  <div id="loader">
+    <div class="heart-beat">💗 Loading love...</div>
+  </div>
+
+  <div id="musicControls">
+    <button id="playMusicBtn">🎵 Play Our Song</button>
+    <button id="pauseMusicBtn" style="display:none;">⏸ Pause</button>
+    <button id="resumeMusicBtn" style="display:none;">▶️ Resume</button>
+  </div>
+
+  <audio id="bgMusic" loop>
+    <source src="aise-kyun.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <header>
+    <h1>To My Little Princess 💜</h1>
+    <p>From your cupcake 🧁</p>
+  </header>
+
+  <div class="love-animation">💖</div>
+
+  <section>
+    <h2>A Message for You</h2>
+    <p>My beautiful kiddo, this is just a little corner of the world made only for you. 💖</p>
+    <audio controls>
+      <source src="audio.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+  </section>
+
+  <section>
+    <h2>Our Memories 📸</h2>
+    <p>I’m working on this part, my kiddo! You’ll be able to see it very soon. I love you, my little bean! 💜</p>
+    <div class="heart">💗</div>
+  </section>
+
+  <section>
+    <h2>Letters from Me to You 💌</h2>
+    <p>More love notes are coming, my lily-loving baby! This page is gonna bloom with words for you 🌸</p>
+  </section>
+
+  <section>
+    <h2>Our Song 🎶</h2>
+    <p>This is our favorite tune, always playing in the background of my heart 🌸</p>
+    <audio controls>
+      <source src="aise-kyun.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+  </section>
+
+  <section>
+    <h2>Always Us 🌙</h2>
+    <p>No matter what, no matter when—it's always gonna be us. Forever and always. 💕</p>
+    <div class="heart">💖</div>
+  </section>
+
+  <div class="footer">Made with love by your cupcake 💘</div>
+
+  <div class="twinkle">💖</div>
+  <div class="twinkle" style="top: 30%; left: 60%;">💜</div>
+  <div class="twinkle" style="top: 70%; left: 80%;">💘</div>
+
+  <script>
+    const playBtn = document.getElementById("playMusicBtn");
+    const pauseBtn = document.getElementById("pauseMusicBtn");
+    const resumeBtn = document.getElementById("resumeMusicBtn");
+    const bgMusic = document.getElementById("bgMusic");
+    const allAudios = document.querySelectorAll("audio");
+  
+    // Function to pause all audios except the one currently playing
+    function pauseOtherAudios(currentAudio) {
+      allAudios.forEach(audio => {
+        if (audio !== currentAudio) {
+          audio.pause();
+          audio.currentTime = 0; // Reset the other audio to the start
+        }
+      });
+    }
+  
+    playBtn.addEventListener("click", () => {
+      bgMusic.play().then(() => {
+        pauseOtherAudios(bgMusic);
+        playBtn.style.display = "none";
+        pauseBtn.style.display = "inline-block";
+      }).catch(err => {
+        alert("Couldn't play the song. Tap again maybe?");
+        console.log(err);
+      });
+    });
+  
+    pauseBtn.addEventListener("click", () => {
+      bgMusic.pause();
+      pauseBtn.style.display = "none";
+      resumeBtn.style.display = "inline-block";
+    });
+  
+    resumeBtn.addEventListener("click", () => {
+      bgMusic.play().then(() => {
+        pauseOtherAudios(bgMusic);
+        resumeBtn.style.display = "none";
+        pauseBtn.style.display = "inline-block";
+      }).catch(err => {
+        alert("Oops, couldn't resume it.");
+        console.log(err);
+      });
+    });
+  
+    // Add event listeners to all audios
+    allAudios.forEach(audio => {
+      audio.addEventListener("play", () => pauseOtherAudios(audio));
+    });
+  
+    window.addEventListener("load", () => {
+      document.getElementById("loader").style.display = "none";
+    });
+  </script>
+  
+
+    <img src="cute-heart.png" alt="Cute Heart" style="position: fixed; bottom: 30px; right: 30px; width: 60px; z-index: 100;">
+    </body>
+    
+</html>
